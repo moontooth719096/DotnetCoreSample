@@ -6,9 +6,9 @@
     <title>@ViewData["Title"] - WebApplication1</title>
 
     <environment include="Development">
-        <link  href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link href="~/lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" /><!--Icon套件-->
     </environment>
     <environment exclude="Development">
         @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
         asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
         <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        <link href="~/lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" /> <!--Icon套件-->
     </environment>
 </head>
 <body>
@@ -42,13 +42,13 @@
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    @*<div class="container body-content">*@
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; 2019 - WebApplication1</p>
         </footer>
-    </div>
+    @*</div>*@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
