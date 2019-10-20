@@ -1,17 +1,11 @@
-﻿<div ng-app="IndexApp" ng-controller="IndexCtrl" ng-init="PictureList=[{src:'https://banner.9splay.com/Global/SHOP/BANNER/20191015142212.png',status:'active'},{src:'https://banner.9splay.com/Global/SHOP/BANNER/20190920155337.jpg',status:''}]">
+﻿<div ng-app="IndexApp" ng-controller="IndexCtrl">
     <div id="Banner" class="row">
         <!--輪播banner-->
         <div id="carouselExampleControls" class="carousel slide col" data-ride="carousel">
-            <div class="carousel-inner"  ng-repeat="x in PictureList">
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{{x.src}}" alt="First slide">
+            <div class="carousel-inner">
+                <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="picture in PictureList">
+                    <img class="d-block w-100" src="{{picture.src}}">
                 </div>
-                @*<div class="carousel-item active">
-
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="https://banner.9splay.com/Global/SHOP/BANNER/20190920155337.jpg" alt="Second slide">
-                </div>*@
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -23,15 +17,22 @@
             </a>
         </div>
     </div>
-    <div id="Item" class="row">
+    <div id="Item" class="carousel row">
+        <font class="T2 col-12">項目</font>
         <!--項目-->
-
+        <div type="button" class="Item form-control col-1" ng-repeat="x in ItemList">
+            <div class="row">
+                <div class="bg-dark col-12" />
+                <div class="bg-light col-12" />
+            </div>
+        </div>
     </div>
 </div>
 <link href="~/css/Index/index_web.min.css" rel="stylesheet" asp-append-version="true" />
 @section Scripts
-{
-  <script src="~/js/index/index.min.js" asp-append-version="true" ></script>
+    {
+    <script src="~/js/index/index.js" asp-append-version="true"></script>
+    @*<script src="~/js/index/index.min.js" asp-append-version="true" ></script>*@
 }
 
 
