@@ -17,13 +17,19 @@
             </a>
         </div>
     </div>
-    <div id="Item" class="carousel row">
-        <font class="T2 col-12">項目</font>
-        <!--項目-->
-        <div type="button" class="Item form-control col-1" ng-repeat="x in ItemList">
-            <div class="row">
-                <div class="bg-dark col-12" />
-                <div class="bg-light col-12" />
+    <font class="T2 col-12">項目</font>
+    <div class="container">
+        <div id="ItemArea" class="row">
+            <!--項目-->
+            <div class="col-2" ng-repeat="x in ItemList">
+                <img src="https://banner.9splay.com/Global/SHOP/DEMO/20190412180453.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">拉基</h5>
+                    <blockquote>
+                        <p>這就是一個拉基</p>
+                    </blockquote>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
             </div>
         </div>
     </div>
