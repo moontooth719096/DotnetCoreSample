@@ -11,10 +11,11 @@
         margin-bottom: 5%;
     }
 }
-
 .T2 {
     font-size: 16px;
     font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .card {
     margin-top: 1%;
@@ -23,5 +24,9 @@
     margin-bottom: 1%;
     padding:1%;
 }
-
+#ItemArea {
+    margin-top:2%;
+    margin-left:3%;
+    margin-right:3%
+}
 

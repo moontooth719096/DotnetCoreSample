@@ -21,6 +21,7 @@
 </head>
 <body>
     <nav class="navbar navbar-fixed-top bg-dark">
+
         <div class="mobile d-none d-md-block">
             <nav class="nav">
                 <a class="nav-link active" href="#">Active</a>
@@ -31,24 +32,30 @@
         </div>
 
         <div class="mobile d-md-none">
-            <nav class="nav">
-                <a class="nav-link active" href="#">Active</a>
-                <a class="nav-link " href="#">Link</a>
-            </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+                <span class="fa fa-list-ul"></span>
+            </button>
         </div>
         <a class="nav-link d-none d-sm-block" href="#">登入</a>
         <a class="nav-link d-sm-none" href="#"><span class="fa fa-sign-in"></span></a>
     </nav>
 
+    <div class="collapse  d-sm-none" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h4 class="text-white">Collapsed content</h4>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+
     <partial name="_CookieConsentPartial" />
 
-    @*<div class="container body-content">*@
+    <div class="body-content">
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; 2019 - WebApplication1</p>
         </footer>
-    @*</div>*@
+    </div>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -57,18 +64,18 @@
     </environment>
     <environment exclude="Development">
         @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>*@
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>*@
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         @*<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-        </script>*@
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+            </script>*@
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="~/lib/angular/dist/angular.min.js"></script>
     </environment>

@@ -1,8 +1,11 @@
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    position: relative;
+    z-index: -1;
 }
-
+/*.collapse-position-fixed {
+    position: relative;
+    z-index: 1;
+}*/
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
@@ -25,4 +28,14 @@
     .carousel-caption {
         display: none;
     }
+}
+.collapsing {
+    width: 0;
+    transition-property: width;
+    height: 100%;
+}
+#navbarToggleExternalContent {
+    display: block;
+    height: 100%;
+    min-height: 100%;
 }
